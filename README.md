@@ -1,3 +1,11 @@
+# Init
+
+- `yarn create react-app my-app --template typescript`
+- `yarn add styled-components babel-plugin-styled-components react-router-dom @types/styled-components react-router-dom @types/react-router-dom`
+- add `"resolutions": {"styled-components": "^5"}` to package.json then `yarn install`
+- create .babelrc `{"plugins": [["babel-plugin-styled-components", { "ssr": true }]]}`
+- `yarn add @apollo/client graphql`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
