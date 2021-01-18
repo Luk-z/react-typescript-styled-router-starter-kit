@@ -42,6 +42,16 @@ for the new repository. For more information, see
 
 [source](https://github.community/t/alternatives-to-forking-into-the-same-account/10200)
 
+## Duplicate repository
+
+- `$ git clone --bare https://github.com/exampleuser/old-repository.git`
+- `$ cd old-repository.git`
+- `$ git push --mirror https://github.com/exampleuser/new-repository.git`
+- `$ cd ..`
+- `$ rm -rf old-repository.git`
+
+[source](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with
