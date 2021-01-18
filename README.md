@@ -32,7 +32,7 @@ Duplicating the repository If the new repository absolutely must be owned by the
 same account, you can duplicate the repository. This creates a new repository
 that starts out identical to the original repository but is not a fork. For more
 information, see
-[Duplicating a repository 1.0k](https://help.github.com/articles/duplicating-a-repository/).
+[Duplicating a repository](https://help.github.com/articles/duplicating-a-repository/).
 
 Because the new repository is not a fork, you won’t be able to create pull
 requests between the two repositories. However, you can still push and pull
