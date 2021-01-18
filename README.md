@@ -1,7 +1,7 @@
 # Init
 
 - `yarn create react-app my-app --template typescript`
-- `yarn add styled-components babel-plugin-styled-components react-router-dom @types/styled-components react-router-dom @types/react-router-dom`
+- `yarn add styled-components babel-plugin-styled-components react-router-dom @types/styled-components react-router-dom @types/react-router-dom react-helmet @types/react-helmet`
 - add `"resolutions": {"styled-components": "^5"}` to package.json then
   `yarn install`
 - create .babelrc
