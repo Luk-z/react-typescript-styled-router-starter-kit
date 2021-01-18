@@ -7,6 +7,25 @@
 - create .babelrc
   `{"plugins": [["babel-plugin-styled-components", { "ssr": true }]]}`
 
+# Fork
+
+You cannot always make a branch or pull an existing branch and push back to it,
+because you are not registered as a collaborator for that specific project.
+
+Forking is nothing more than a clone on the GitHub server side:
+
+- without the possibility to directly push back
+- with fork queue feature added to manage the merge request
+
+You keep a fork in sync with the original project by:
+
+- adding the original project as a remote
+- fetching regularly from that original project
+- rebase your current development on top of the branch of interest you got
+  updated from that fetch.
+
+https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github
+
 # Getting Started with Create React App
 
 This project was bootstrapped with
