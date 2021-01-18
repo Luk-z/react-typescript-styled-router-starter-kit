@@ -44,11 +44,11 @@ for the new repository. For more information, see
 
 ## Duplicate repository
 
-- `$ git clone --bare https://github.com/exampleuser/old-repository.git`
-- `$ cd old-repository.git`
-- `$ git push --mirror https://github.com/exampleuser/new-repository.git`
+- `$ git clone --bare https://github.com/Luk-z react-typescript-styled-router-starter-kit.git`
+- `$ cd react-typescript-styled-router-starter-kit`
+- `$ git push --mirror https://github.com/Luk-z react-typescript-styled-router-starter-kit-NEW.git`
 - `$ cd ..`
-- `$ rm -rf old-repository.git`
+- `$ rm -rf react-typescript-styled-router-starter-kit`
 
 [source](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository)
 
