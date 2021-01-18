@@ -24,7 +24,23 @@ You keep a fork in sync with the original project by:
 - rebase your current development on top of the branch of interest you got
   updated from that fetch.
 
-https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github
+[source](https://stackoverflow.com/questions/3611256/forking-vs-branching-in-github)
+
+## Don't fork into the same account
+
+Duplicating the repository If the new repository absolutely must be owned by the
+same account, you can duplicate the repository. This creates a new repository
+that starts out identical to the original repository but is not a fork. For more
+information, see
+[Duplicating a repository 1.0k](https://help.github.com/articles/duplicating-a-repository/).
+
+Because the new repository is not a fork, you won’t be able to create pull
+requests between the two repositories. However, you can still push and pull
+changes between the two repositories by adding the original repository as remote
+for the new repository. For more information, see
+[Adding a remote](https://help.github.com/articles/adding-a-remote/).
+
+[source](https://github.community/t/alternatives-to-forking-into-the-same-account/10200)
 
 # Getting Started with Create React App
 
