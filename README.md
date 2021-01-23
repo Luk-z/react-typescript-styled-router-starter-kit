@@ -13,9 +13,10 @@ yarn add styled-components @types/styled-components react-router-dom @types/reac
 yarn add -D babel-plugin-styled-components
 ```
 
-Add `resolutions` property to package.json:
+Add `resolutions` property to `package.json`:
 
 ```jsx
+//package.json
 {
   "resolutions": { 
     "styled-components": "^5"
