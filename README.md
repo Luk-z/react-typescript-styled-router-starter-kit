@@ -125,23 +125,24 @@ replace `index.tsx` with (just added `<GlobalStyle />` component ):
 
 ```
 //src/index.tsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import GlobalStyle from './globalStyle'
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById('root'),
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()
 ```
 
 replace `App.tsx` with:
@@ -208,6 +209,105 @@ function App() {
 }
 
 export default App
+```
+
+create `Logo.tsx` file:
+
+```
+//src/components/Logo.tsx
+import styled from 'styled-components'
+import logo from '../logo.svg'
+
+const AppContainer = styled.div`
+  text-align: center;
+`
+const AppLogoContainer = styled.img`
+  height: 40vmin;
+  pointer-events: none;
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`
+const AppHeaderContainer = styled.header`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`
+const AppLinkContainer = styled.a`
+  color: #61dafb;
+`
+
+const Logo: React.FC = () => (
+  <AppContainer>
+    <AppHeaderContainer>
+      <AppLogoContainer src={logo} alt="logo" />
+      <p>
+        Edit <code>src/App.tsx</code> and save to reload.
+      </p>
+      <AppLinkContainer
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+      </AppLinkContainer>
+    </AppHeaderContainer>
+  </AppContainer>
+)
+
+export default Logo
+```
+
+create `Home.tsx` file:
+
+```
+//src/pages/Home.tsx
+import {Helmet} from 'react-helmet'
+import Logo from '../components/Logo'
+
+const Home: React.FC = () => (
+  <div>
+    <Helmet>
+      <title>Home - React Demo</title>
+    </Helmet>
+    <Logo />
+  </div>
+)
+
+export default Home
+```
+
+create `About.tsx` file:
+
+```
+//src/pages/About.tsx
+import {Helmet} from 'react-helmet'
+
+const About: React.FC = () => (
+  <div>
+    <Helmet>
+      <title>About - React Demo</title>
+    </Helmet>
+    About
+  </div>
+)
+
+export default About
 ```
 
 
