@@ -1,11 +1,40 @@
-# Init
+# Installation
 
-- `yarn create react-app my-app --template typescript`
-- `yarn add styled-components babel-plugin-styled-components react-router-dom @types/styled-components react-router-dom @types/react-router-dom react-helmet @types/react-helmet`
-- add `"resolutions": {"styled-components": "^5"}` to package.json then
-  `yarn install`
-- create .babelrc
-  `{"plugins": [["babel-plugin-styled-components", { "ssr": true }]]}`
+```
+yarn install
+yarn start
+```
+
+# Start from scratch
+
+```
+yarn create react-app my-app --template typescript && cd my-appyarn 
+add styled-components @types/styled-components react-router-dom @types/react-router-dom react-helmet @types/react-helmet
+yarn add -D babel-plugin-styled-components
+```
+
+Add `resolutions` property to package.json:
+
+```jsx
+{
+  "resolutions": { 
+    "styled-components": "^5"
+  }
+}
+```
+
+Run `yarn install`.
+
+Create `.babelrc` file:
+
+```jsx
+//.babelrc
+{
+  "plugins": [ 
+    ["babel-plugin-styled-components", { "ssr": true }] 
+  ]
+}
+```
 
 # Fork
 
