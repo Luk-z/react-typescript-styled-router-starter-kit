@@ -36,6 +36,13 @@ Create `.babelrc` file:
 }
 ```
 
+Run:
+
+```
+yarn install
+yarn start
+```
+
 # Fork
 
 You cannot always make a branch or pull an existing branch and push back to it,
