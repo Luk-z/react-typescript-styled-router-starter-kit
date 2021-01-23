@@ -96,6 +96,121 @@ Add `.prettierrc` file
   }
 ```
 
+Now edit files:
+
+remove `index.css` and create `globalStyle.ts`:
+
+```
+//src/globalStyle.ts
+import {createGlobalStyle} from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
+`
+export default GlobalStyle
+```
+
+replace `index.tsx` with (just added `<GlobalStyle />` component ):
+
+```
+//src/index.tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+
+replace `App.tsx` with:
+
+```
+//src/App.tsx
+import React from 'react'
+import {Helmet} from 'react-helmet'
+import {BrowserRouter, Link, Switch, Route} from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
+
+function App() {
+  const defaultLocale = ''
+  const url = ''
+  const metaOgImageUrl = ''
+  return (
+    <BrowserRouter>
+      <div>
+        <Helmet
+          defer={false}
+          htmlAttributes={{
+            lang: defaultLocale,
+          }}
+          link={[{rel: 'canonical', href: url}]}
+          meta={[
+            {property: 'og:url', content: url},
+            {
+              property: 'og:image',
+              content: metaOgImageUrl,
+            },
+            {property: 'og:site_name', content: 'Demo App'},
+            /*{property: 'fb:app_id', content: facebookAppId},
+            {name: 'apple-itunes-app', content: appStoreIdContent},
+            {name: 'google-play-app', content: androidStoreIdContent},*/
+          ]}
+        />
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  )
+}
+
+export default App
+```
+
+
 Run:
 
 ```
