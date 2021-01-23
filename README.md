@@ -18,6 +18,7 @@ Add `resolutions` property to `package.json`:
 ```jsx
 //package.json
 {
+  ...
   "resolutions": { 
     "styled-components": "^5"
   }
