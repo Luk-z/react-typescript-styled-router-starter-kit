@@ -39,8 +39,61 @@ Create `.babelrc` file:
 Add `.eslintcache` to `.gitignore`
 
 ```
+//.gitignore
+
+...
+
 # ESLint cache
 .eslintcache
+```
+
+Add `.eslintignore` file
+
+```
+//.eslintignore
+node_modules
+coverage
+build
+```
+
+Add `.gitattributes` file
+
+```
+//.gitattributes
+* text=auto eol=lf
+```
+
+Add `.prettierignore` file
+
+```
+//.prettierignore
+node_modules
+coverage
+build
+```
+
+Add `.prettierrc` file
+
+```
+//.prettierrc
+{
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  }
 ```
 
 Run:
