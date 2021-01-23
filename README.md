@@ -36,6 +36,13 @@ Create `.babelrc` file:
 }
 ```
 
+Add `.eslintcache` to `.gitignore`
+
+```
+# ESLint cache
+.eslintcache
+```
+
 Run:
 
 ```
