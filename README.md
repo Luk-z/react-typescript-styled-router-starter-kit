@@ -8,8 +8,8 @@ yarn start
 # Start from scratch
 
 ```
-yarn create react-app my-app --template typescript && cd my-appyarn 
-add styled-components @types/styled-components react-router-dom @types/react-router-dom react-helmet @types/react-helmet
+yarn create react-app my-app --template typescript && cd my-app
+yarn add styled-components @types/styled-components react-router-dom @types/react-router-dom react-helmet @types/react-helmet
 yarn add -D babel-plugin-styled-components
 ```
 
