@@ -1,4 +1,5 @@
 # *** DEPRECATED ***
+use https://github.com/Luk-z/react-ts-styled-router-starter-kit
 
 # Installation
 
